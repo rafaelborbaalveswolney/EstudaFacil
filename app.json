@@ -1,24 +1,37 @@
+
 {
   "expo": {
-    "name": "EstudaFacilJS",
-    "slug": "EstudaFacilJS",
+    "name": "EstudaFácil",
+    "slug": "estudafacil",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F7FB",
+    "platforms": [
+      "android",
+      "ios"
+    ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.estudafacil.app",
+      "buildNumber": "2",
+      "supportsTablet": false,
+      "icon": "./assets/ios-icon.png"
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+      "package": "com.estudafacil.app",
+      "versionCode": 2,
+      "icon": "./assets/icon.png",
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.VIBRATE"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0a1a8802-e4cf-4a26-b41e-928ef9819809"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "owner": "rafael_2026"
   }
 }
