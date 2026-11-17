@@ -20,11 +20,13 @@
     },
     "android": {
       "package": "com.estudafacil.app",
-      "versionCode": 2,
+      "versionCode": 3,
       "icon": "./assets/icon.png",
       "blockedPermissions": [
         "android.permission.SYSTEM_ALERT_WINDOW",
-        "android.permission.VIBRATE"
+        "android.permission.VIBRATE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
       ]
     },
     "extra": {

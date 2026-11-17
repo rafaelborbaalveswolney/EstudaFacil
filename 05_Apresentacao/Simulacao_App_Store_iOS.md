@@ -1,13 +1,13 @@
-# SIMULAÇÃO DE CADASTRO — APPLE APP STORE CONNECT
+﻿# SIMULAÇÃO DE CADASTRO — APPLE APP STORE CONNECT
 
 ## Aplicativo EstudaFácil
 
 **Versão planejada:** 1.0.0  
-**Build Number configurado:** 2  
-**Bundle Identifier:** com.estudafacil.app  
+**Build Number iOS informado no planejamento:** 2  
+**Bundle Identifier:** `com.estudafacil.app`  
 **Plataforma:** iOS  
 **Responsável:** Equipe de Desenvolvimento do EstudaFácil  
-**Data:** 16 de novembro de 2026  
+**Data da revisão:** 17 de novembro de 2026  
 **Finalidade:** Simulação acadêmica de preparação e publicação na Apple App Store.
 
 ---
@@ -22,13 +22,19 @@
 
 **Idioma principal:** Português (Brasil)
 
-**Bundle Identifier:** com.estudafacil.app
+**Bundle Identifier:** `com.estudafacil.app`
 
-**Versão:** 1.0.0
+**Versão planejada:** 1.0.0
 
-**Build Number:** 2
+**Build Number de referência:** 2
 
 **Tecnologia utilizada:** React Native com Expo.
+
+**Situação:** Preparação acadêmica, sem compilação ou publicação efetiva para iOS.
+
+**Observação:** o número de compilação iOS deve ser confirmado na configuração do projeto antes de uma compilação real. O `versionCode=3` utilizado no Android é uma configuração independente.
+
+---
 
 ## 2. FICHA DA APP STORE
 
@@ -66,33 +72,59 @@ O aplicativo possui uma interface simples e não exige cadastro ou login para ut
 
 **EstudaFácil — seus estudos organizados em um só lugar.**
 
+---
+
 ## 3. ASO — PALAVRAS-CHAVE
 
 **Palavras-chave planejadas:**
 
 tarefas,matérias,calendário,escola,disciplinas,planejamento,rotina,atividades,provas
 
-Essas palavras representam as funcionalidades e o público-alvo do aplicativo. Seu uso seria validado de acordo com o limite e as regras do campo de palavras-chave da App Store Connect.
+Essas palavras representam as funcionalidades e o público-alvo do aplicativo.
+
+Seu uso seria validado de acordo com os limites e as regras aplicáveis ao campo de palavras-chave da App Store Connect.
+
+---
 
 ## 4. IDENTIDADE VISUAL
 
-**Ícone iOS:**
+### 4.1 Ícone iOS
 
-- Arquivo: `assets/ios-icon.png`
-- Resolução: 1024 × 1024 pixels.
+**Arquivo preparado:**
 
-**Capturas disponíveis no projeto:**
+`02_Imagens/ios-icon.png`
 
-- `03_Screenshots/01-inicio.png`
-- `03_Screenshots/02-tarefas.png`
-- `03_Screenshots/03-materias.png`
-- `03_Screenshots/04-calendario.png`
+**Resolução:** 1024 × 1024 pixels.
 
-As screenshots disponíveis foram capturadas no Android.
+O arquivo foi preparado como material visual para a simulação da publicação.
 
-**Screenshots iOS:** Não produzidas.
+A compatibilidade final do ícone com um aplicativo iOS compilado dependeria da validação do projeto e do pacote gerado.
 
-Para a publicação real, seriam necessárias capturas compatíveis com as especificações da Apple e representativas da experiência do aplicativo no iOS.
+### 4.2 Imagens das telas
+
+Foram preparados quatro mockups ilustrativos para representar como o EstudaFácil poderia ser apresentado na App Store.
+
+**Arquivos disponíveis:**
+
+- `03_Screenshots/IOS/ios-01-inicio-mockup.png`
+- `03_Screenshots/IOS/ios-02-tarefas-mockup.png`
+- `03_Screenshots/IOS/ios-03-materias-mockup.png`
+- `03_Screenshots/IOS/ios-04-calendario-mockup.png`
+
+Os mockups representam visualmente as seguintes telas:
+
+1. Início.
+2. Tarefas.
+3. Matérias.
+4. Calendário.
+
+**Importante:** essas imagens são simulações ilustrativas baseadas nas funcionalidades do EstudaFácil. Não foram capturadas de um aplicativo executado em iPhone.
+
+As capturas reais do aplicativo Android estão armazenadas separadamente em `03_Screenshots/Android/`.
+
+Para uma publicação real na App Store, seria necessário compilar e executar o aplicativo em iOS e preparar capturas que representem fielmente seu funcionamento, respeitando as especificações da Apple.
+
+---
 
 ## 5. POLÍTICA DE PRIVACIDADE
 
@@ -102,59 +134,94 @@ https://clever-palmier-327fdc.netlify.app/
 
 **Responsável:** Equipe de Desenvolvimento do EstudaFácil.
 
-**E-mail de contato:** rafaelborbaalveswolney@gmail.com
+**E-mail de contato informado:**
+
+rafaelborbaalveswolney@gmail.com
 
 **URL de suporte:** Pendente de criação.
 
-A Política de Privacidade está disponível publicamente e foi preparada para informar o tratamento dos dados do aplicativo.
+A Política de Privacidade foi disponibilizada publicamente e apresenta informações sobre o armazenamento local e as práticas de tratamento de dados documentadas para o aplicativo.
+
+A página também contém informações sobre as permissões Android verificadas durante a preparação do projeto.
+
+Para uma publicação real em iOS, seria necessária uma revisão final das declarações aplicáveis especificamente à versão iOS.
+
+---
 
 ## 6. APP PRIVACY — PRIVACIDADE DOS DADOS
 
-**Cadastro e login:** Não implementados.
+O formulário App Privacy da Apple exige informações sobre as práticas de coleta de dados do aplicativo e das tecnologias utilizadas.
 
-**Publicidade:** Não implementada diretamente.
+Para a simulação acadêmica do EstudaFácil, foram considerados os seguintes pontos:
 
-**Servidor próprio:** Não implementado.
+| Item | Situação identificada |
+|---|---|
+| Cadastro e login | Não implementados |
+| Publicidade no código desenvolvido | Não implementada diretamente |
+| Servidor próprio para tarefas e matérias | Não implementado |
+| Armazenamento de dados de estudo | Local, utilizando AsyncStorage |
+| Rastreamento publicitário no código desenvolvido | Não implementado diretamente |
+| Coleta por bibliotecas e serviços de terceiros | Requer validação específica |
+| Auditoria completa em iOS | Não realizada |
+| Formulário App Privacy oficial | Não enviado |
 
-**Armazenamento de tarefas e matérias:** Local, com AsyncStorage.
+### Declaração simulada
 
-**Rastreamento publicitário:** Não implementado diretamente no código desenvolvido.
+O EstudaFácil foi desenvolvido para armazenar localmente as tarefas, matérias e atividades informadas pelo usuário.
 
-**Coleta por dependências ou serviços:** Ainda requer validação específica para iOS.
+Não foi implementado um sistema próprio de cadastro, autenticação ou sincronização dessas informações com um servidor.
 
-**Declaração App Privacy:** Simulada preliminarmente, sem preenchimento ou envio real no App Store Connect.
+Entretanto, a ausência dessas funcionalidades não comprova, isoladamente, a inexistência de dados técnicos tratados por bibliotecas, serviços ou componentes de terceiros.
+
+Por esse motivo, a simulação do formulário App Privacy é preliminar.
 
 **Documento de apoio:**
 
 `04_Privacidade/Simulacao_Formularios_Privacidade_EstudaFacil.pdf`
 
-Para uma publicação real, seria necessário verificar as bibliotecas, os serviços integrados e o comportamento da compilação iOS antes de declarar as práticas de coleta e compartilhamento.
+Antes de uma publicação real, seria necessário verificar as práticas efetivas de coleta, compartilhamento e rastreamento do aplicativo compilado para iOS.
+
+---
 
 ## 7. PREPARAÇÃO DA COMPILAÇÃO iOS
 
 **Tecnologia:** React Native com Expo.
 
-**Identificador:** com.estudafacil.app
+**Bundle Identifier de referência:** `com.estudafacil.app`
 
-**Versão configurada:** 1.0.0
+**Versão planejada:** 1.0.0
 
-**Número da compilação:** 2
+**Build Number de referência:** 2, sujeito à confirmação na configuração do projeto.
 
-**Ícone:** Configurado no arquivo `app.json`.
+**Ícone iOS:** Arquivo visual preparado.
 
-**Perfil iOS de produção:** Configurado no arquivo `eas.json`.
+**Configuração do projeto:** Estrutura básica para iOS prevista no projeto Expo.
+
+**Perfil de produção iOS:** Previsto no arquivo `eas.json`.
 
 **Arquivo IPA:** Não gerado.
 
-**Certificados de assinatura iOS:** Não configurados.
+**Certificados de assinatura iOS:** Não configurados para distribuição.
 
-**Conta Apple Developer para distribuição:** Não utilizada.
+**Conta Apple Developer para distribuição:** Não utilizada nesta atividade.
 
 **Envio ao App Store Connect:** Não realizado.
 
-O aplicativo possui configurações básicas para iOS, mas não foi compilado nem assinado para essa plataforma.
+O aplicativo possui uma estrutura de desenvolvimento multiplataforma, mas não foi compilado, assinado ou validado para iOS.
 
-A geração e distribuição de um IPA exigiriam o cumprimento dos requisitos da Apple.
+### Etapas necessárias em uma publicação real
+
+1. Confirmar as configurações iOS do projeto.
+2. Configurar o identificador e o número da compilação.
+3. Preparar as credenciais de assinatura exigidas pela Apple.
+4. Gerar um pacote iOS apropriado para distribuição.
+5. Testar o aplicativo em ambiente iOS.
+6. Preparar os materiais definitivos da App Store.
+7. Enviar a compilação e os metadados para análise.
+
+Essas etapas são apresentadas apenas como planejamento.
+
+---
 
 ## 8. TESTES E TESTFLIGHT
 
@@ -164,19 +231,29 @@ A geração e distribuição de um IPA exigiriam o cumprimento dos requisitos da
 
 **TestFlight:** Não utilizado.
 
-**Plano de testes iOS:**
+**Arquivo IPA instalado:** Nenhum.
+
+### Plano de testes iOS
+
+Caso fosse realizada uma compilação para iOS, seriam necessários os seguintes testes:
 
 - Abrir o aplicativo.
-- Testar a navegação.
+- Verificar a navegação entre as telas.
 - Criar, concluir e excluir tarefas.
 - Cadastrar e excluir matérias.
+- Verificar a prevenção de matérias duplicadas.
 - Navegar pelo calendário.
-- Cadastrar atividades.
-- Conferir a persistência dos dados.
+- Cadastrar e excluir atividades por data.
+- Confirmar a persistência dos dados.
 - Abrir a Política de Privacidade.
-- Verificar a interface em diferentes tamanhos de tela.
+- Avaliar a interface em diferentes tamanhos de tela.
+- Verificar permissões e possíveis comunicações de rede.
 
-Esses procedimentos representam um planejamento, não resultados de testes realizados.
+Esses procedimentos representam um plano de validação, não resultados de testes efetivamente realizados.
+
+Os testes executados na versão Android não substituem a validação do aplicativo em iOS.
+
+---
 
 ## 9. PÚBLICO-ALVO E CLASSIFICAÇÃO ETÁRIA
 
@@ -190,35 +267,57 @@ O aplicativo não possui funcionalidades implementadas de apostas, conteúdo sex
 
 **Classificação etária oficial:** Não obtida.
 
-O resultado definitivo dependeria do preenchimento do questionário de classificação etária no App Store Connect.
+A classificação definitiva dependeria do preenchimento do questionário correspondente na App Store Connect e da avaliação das características do aplicativo.
+
+---
 
 ## 10. REQUISITOS PENDENTES
 
+Para uma publicação real na Apple App Store, ainda seria necessário:
+
+- Confirmar o `buildNumber` e as configurações iOS.
 - Disponibilizar uma página pública de suporte.
-- Validar as informações de privacidade do aplicativo iOS.
-- Gerar screenshots próprias de dispositivos iOS.
+- Validar as declarações de privacidade específicas do iOS.
+- Verificar as bibliotecas e os serviços incorporados ao aplicativo.
+- Compilar e executar o aplicativo em ambiente iOS.
+- Produzir capturas reais das telas em dispositivos ou simuladores compatíveis.
 - Configurar certificados e credenciais de assinatura.
-- Gerar o arquivo IPA apropriado.
-- Instalar e testar o aplicativo no iOS.
+- Gerar o arquivo IPA apropriado para distribuição.
 - Avaliar a distribuição pelo TestFlight.
 - Preencher a classificação etária oficial.
-- Enviar o aplicativo para análise, caso a publicação real seja necessária.
+- Enviar a compilação e os metadados para análise, caso a publicação real seja necessária.
+
+---
 
 ## 11. CONCLUSÃO
 
-O EstudaFácil possui os metadados, a identidade visual, a Política de Privacidade e as configurações básicas necessários à preparação acadêmica de uma submissão para a Apple App Store.
+O EstudaFácil possui os principais materiais necessários à **simulação acadêmica de preparação de uma submissão para a Apple App Store**, incluindo:
 
-A etapa iOS foi documentada como uma simulação, distinguindo os recursos preparados dos procedimentos que ainda não foram executados.
+- Metadados e descrição do aplicativo.
+- Palavras-chave de divulgação.
+- Ícone iOS.
+- Quatro mockups ilustrativos das telas.
+- Política de Privacidade pública.
+- Simulação do formulário App Privacy.
+- Planejamento das etapas de compilação e distribuição.
 
-**Situação final:**
+A etapa iOS foi desenvolvida como uma simulação documental e visual, distinguindo os materiais preparados dos procedimentos técnicos que ainda não foram executados.
 
-- Metadados: preparados.
-- Ícone iOS: disponível.
-- Configuração do projeto: realizada.
-- Política de Privacidade: publicada.
-- App Privacy: simulado.
-- Screenshots iOS: pendentes.
-- Arquivo IPA: não gerado.
-- Assinatura iOS: pendente.
-- TestFlight: não realizado.
-- Publicação real: não realizada.
+### Situação final
+
+| Item | Situação |
+|---|---|
+| Metadados | Preparados |
+| Ícone iOS | Disponível |
+| Mockups ilustrativos iOS | 4 arquivos disponíveis |
+| Capturas reais em iOS | Não produzidas |
+| Política de Privacidade | Publicada |
+| App Privacy | Simulado |
+| Configuração básica iOS | Planejada no projeto |
+| Build iOS | Não realizado |
+| Arquivo IPA | Não gerado |
+| Assinatura iOS | Não realizada |
+| TestFlight | Não utilizado |
+| Publicação real | Não realizada |
+
+**Resultado:** preparação acadêmica da App Store Connect documentada, sem representar uma submissão ou aprovação efetiva pela Apple.

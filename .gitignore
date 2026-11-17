@@ -54,3 +54,6 @@ yarn-error.*
 # Arquivos temporários do Windows
 Thumbs.db
 Desktop.ini
+
+# Binarios Android e arquivos auxiliares de compilacao
+/01_Binarios/

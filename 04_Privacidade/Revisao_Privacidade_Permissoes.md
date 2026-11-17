@@ -1,7 +1,7 @@
-# REVISÃO DE PRIVACIDADE E PERMISSÕES — ESTUDAFÁCIL
+﻿# REVISÃO DE PRIVACIDADE E PERMISSÕES — ESTUDAFÁCIL
 
 **Aplicativo:** EstudaFácil  
-**Versão Android analisada:** 1.0.0 (2)  
+**Versão Android analisada:** 1.0.0 (3) - histórico da versão 2 preservado  
 **Identificador:** com.estudafacil.app  
 **Data:** 16 de novembro de 2026
 
@@ -23,7 +23,7 @@ O aplicativo não exige cadastro nem login e não possui um servidor próprio pa
 
 O AsyncStorage não oferece criptografia automática dos dados armazenados localmente.
 
-## 3. Permissões identificadas no AAB versão 2
+## 3. Permissões identificadas no AAB versão 2 (histórico)
 
 A análise foi realizada no Android Studio, utilizando o arquivo `EstudaFacil-release-v2.aab`.
 
@@ -41,11 +41,38 @@ A análise foi realizada no Android Studio, utilizando o arquivo `EstudaFacil-re
 
 A ausência das duas permissões removidas foi confirmada diretamente no AndroidManifest.xml do novo AAB.
 
+### Validação da versão 3
+
+O arquivo `EstudaFacil-release-v3.aab` foi gerado utilizando o EAS Build com o perfil `production`.
+
+**Configuração validada:**
+
+- Package ID: `com.estudafacil.app`
+- Version Name: `1.0.0`
+- Version Code: `3`
+- Target SDK: `36`
+
+**Permissões declaradas no manifesto do módulo base:**
+
+- `android.permission.INTERNET`
+- `com.estudafacil.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`
+
+**Permissões ausentes no manifesto da versão 3:**
+
+- `android.permission.READ_EXTERNAL_STORAGE`
+- `android.permission.WRITE_EXTERNAL_STORAGE`
+- `android.permission.SYSTEM_ALERT_WINDOW`
+- `android.permission.VIBRATE`
+
+O manifesto foi extraído diretamente do AAB versão 3 utilizando o Bundletool 1.18.3.
+
+A ausência das permissões de armazenamento externo foi confirmada. Ainda são necessários testes funcionais da versão atualizada em dispositivo Android.
+
 ## 4. Avaliação das permissões
 
 A permissão INTERNET permanece no manifesto do aplicativo.
 
-As permissões READ_EXTERNAL_STORAGE e WRITE_EXTERNAL_STORAGE aparecem limitadas a versões antigas do Android e ainda precisam de avaliação para determinar se podem ser removidas sem prejudicar componentes nativos.
+As permissões READ_EXTERNAL_STORAGE e WRITE_EXTERNAL_STORAGE estavam presentes na versão 2, limitadas à API 32. Após análise do armazenamento local e das dependências, foram configuradas para bloqueio e sua ausência foi confirmada no AAB versão 3.
 
 A permissão DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION é uma permissão interna, utilizada para proteção de componentes do aplicativo.
 
@@ -90,7 +117,7 @@ As respostas documentadas são preliminares e deverão ser confirmadas antes de 
 
 ## 8. Pendências identificadas
 
-- Avaliar a remoção das permissões de armazenamento externo.
+- Remoção das permissões de armazenamento externo: concluída e validada no AAB versão 3.
 - Testar a versão Android atualizada como APK independente.
 - Verificar as práticas de dados das dependências utilizadas.
 - Confirmar a Política de Privacidade na versão final instalada.
@@ -98,7 +125,7 @@ As respostas documentadas são preliminares e deverão ser confirmadas antes de 
 
 ## 9. Conclusão
 
-A análise do AAB versão 2 confirmou a remoção das permissões SYSTEM_ALERT_WINDOW e VIBRATE.
+A análise do AAB versão 3 confirmou que SYSTEM_ALERT_WINDOW, VIBRATE, READ_EXTERNAL_STORAGE e WRITE_EXTERNAL_STORAGE não estão declaradas no manifesto do módulo base.
 
 O EstudaFácil possui Política de Privacidade pública, armazenamento local de informações e documentos de simulação dos formulários exigidos pelas lojas.
 
